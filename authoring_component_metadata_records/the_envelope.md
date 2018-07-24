@@ -100,7 +100,7 @@ This top-down approach is the preferred way of describing resource hierarchies, 
 
 This is a bottom-up method of describing resource hierarchies, and constitutes an alternative or additional approach to that described in [E17](#e17-use-resourceproxy-to-express-partitive-relationships-between-the-described-resource-as-a-whole-and-its-constituent-resources). So far, IsPartOf is not widely used nor well supported by the CLARIN infrastructure, hence the [E17](#e17-use-resourceproxy-to-express-partitive-relationships-between-the-described-resource-as-a-whole-and-its-constituent-resources) approach should be preferred whenever feasible. See also [Granularity](/common_approachesproblems/granularity.md).
 
-###### E19. Do not use ResourceRelation to relate resources other than those listed in ResourceProxyList {#e19}
+###### E19. Use the right mechanism to define relations in your metadata {#e19}
 
 Note that ResourceRelation is strictly connected to ResourceProxy in the sense that both resources related by ResourceRelation must be instances of ResourceProxy. Any other relationships, e.g.
 

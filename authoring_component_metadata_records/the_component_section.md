@@ -18,9 +18,9 @@ It is possible to refer to the resource a Components section specifically applie
 
 ### Text Elements and Attributes {#vocabularies}
 
-###### CS3: In case of multilinguality, explicitly name the languages used
+###### CS3: Explicitly name the languages used
 
-The default language for element contents is English, meaning that English wording should be provided for each element of the CMDI profile used. Additionally, other languages may be used, complementing the English version of a CMDI record. The possibility of multilinguality has to be already included in the design of the component. For the specification of the language applied, each element should be provided with an `@xml:lang` attribute. Use an [BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt) [language tag](https://tools.ietf.org/rfc/bcp/bcp47.txt) to unambiguously identify the respective language within `@xml:lang`.
+The default language for element contents is English, meaning that English wording should be provided for each element of the CMDI profile used. Additionally, other languages may be used, complementing the English version of a CMDI record. The possibility of multilinguality has to be already included in the design of the component. For the specification of the language applied, each element should be provided with an `@xml:lang` attribute \(even when the content is in English\). Use an [BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt) [language tag](https://tools.ietf.org/rfc/bcp/bcp47.txt) to unambiguously identify the respective language within `@xml:lang`.
 
 ###### CS4: Use specific rather than \(only\) generic metadata
 
