@@ -18,8 +18,5 @@
   * [Problem indicators \(“bad smells”\)](authoring_component_metadata_records/problem_indicators_bad_smells.md)
 * [Common approaches/problems](common_approachesproblems/README.md)
   * [Multilingual metadata](common_approachesproblems/multilingual_metadata.md)
-  * [Granularity](common_approachesproblems/granularity.md)
-  * [Licensing](common_approachesproblems/licensing.md)
-  * [Common use cases](common_approachesproblems/common_use_cases.md)
   * [Dealing with uncertainty](common_approachesproblems/dealing-with-uncertainty.md)
 
