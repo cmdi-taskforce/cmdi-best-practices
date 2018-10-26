@@ -6,7 +6,7 @@
 
 % Set 'bpdraft' to true to enable comments and work in progress sections.
 % Set to false or comment out for version for publication
-%\setboolean{bpdraft}{true}
+\setboolean{bpdraft}{true}
 
 \setbpversion{1.2.0}
 
@@ -66,7 +66,9 @@
 \newcommandx{\note}[2][1=]{\ifthenelse{\boolean{bpdraft}}{\todo[noinline,linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}{}}
 %priority indication - TODO: make a better implementation
 \newcommandx{\priority}[2][1=]{\todo[inline,linecolor=yellow,backgroundcolor=yellow!25,bordercolor=yellow,#1]{Priority: #2}}
-
+\newcommandx{\clarinb}[2][1=]{\todo[inline,linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{CLARIN B Centre requirement: #2}}
+\newcommandx{\checker}[2][1=]{\todo[inline,linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{Check: #2}}
+\newcommandx{\pchecker}[2][1=]{\todo[inline,linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{Partial check: #2}}
 \input{tex/xmllistings}
 
 \usepackage[color]{changebar}
