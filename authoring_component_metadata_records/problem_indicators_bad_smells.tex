@@ -18,9 +18,6 @@ As is the case for component and profile definitions (see p.\pageref{modelling-b
 \item
   Low ``information entropy''. If there are many highly similar files, this could be an indication that relevant, distinguishing information is lacking. If the used profile does not allow for richer descriptions, reconsider your choice of profile and/or modelling decisions.
 \item
-  Occurrence of multiple values in a single string. For example multiple element values separated by commas, semicolons or other characters. In general it is better to use repeating elements, or use separate elements if the individual values have different semantics (for example resource type ``English literature -- Middle English``).
-  \note{Twan: Not distinct enough compared to CS4}
-\item
   Metadata content in multiple languages but no `xml:lang' attributes. It is highly recommended to provide multilingual metadata if applicable (for example original and translated titles, see \nameref{multilingual-metadata}). However when doing so, the elements concerned should be annotated with the \texttt{@xml:lang} attribute. If there are no such attributes, or another (custom) attribute is used to indicate the description language, use a profile (version) that allows for this attribute instead.
 \item
   URLs or persistent identifiers (PIDs) in the payload. Online resources that are described through a metadata record or relate to it in another way are generally accommodated for by the Resource Proxies (see \hyperref[e5]{E5}). In many cases URLs or PIDs such as handle URIs appearing in elements and attributes outside the envelope do in fact represent either a
