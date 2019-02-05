@@ -7,8 +7,8 @@ E1: Include a MdSelfLink
 \priority{high}\clarinb{6.7}\checker{CMDI Instance Validator}
 
 Include a MdSelfLink that resolves to the CMD record hosted at the CLARIN Centre. Including the MdSelfLink is a requirement for CLARIN B Centres (see
-\href{http://hdl.handle.net/1839/00-DOCS.CLARIN.EU-78}{CE-2013-0095} section 6 sub-requirement 7) as is the support of content negotiation for the MdSelfLink (see
-\href{http://hdl.handle.net/1839/00-DOCS.CLARIN.EU-78}{CE-2013-0095} section 7), this allows both humans and machines to see/retrieve the record in its context. The MdSelfLink is also important in the reconstruction of a CMD record (collection) hierarchy (see below).
+\href{http://hdl.handle.net/1839/00-DOCS.CLARIN.EU-78}{CE-2013-0095 \cite{ce20130095}} section 6 sub-requirement 7) as is the support of content negotiation for the MdSelfLink (see
+\href{http://hdl.handle.net/1839/00-DOCS.CLARIN.EU-78}{CE-2013-0095 \cite{ce20130095}} section 7), this allows both humans and machines to see/retrieve the record in its context. The MdSelfLink is also important in the reconstruction of a CMD record (collection) hierarchy (see below).
 
 \label{e2}
 E2: The MdSelfLink should be a Persistent Identifier (PID)
@@ -16,7 +16,7 @@ E2: The MdSelfLink should be a Persistent Identifier (PID)
 \priority{medium}\clarinb{6.7}\checker{CMDI Instance Validator}
 
 By giving a CMD record a PID and including it in the MdSelfLink it becomes possible for tools that present the records to the user to provide them with a persistent link suitable as a bookmark that will stand the test of time. This is another requirement for CLARIN B Centres (see
-\href{http://hdl.handle.net/1839/00-DOCS.CLARIN.EU-78}{CE-2013-0095} section 6 sub-requirement 7).
+\href{http://hdl.handle.net/1839/00-DOCS.CLARIN.EU-78}{CE-2013-0095 \cite{ce20130095}} section 6 sub-requirement 7).
 
 E3: Include a MdCollectionDisplayName
 
@@ -28,7 +28,7 @@ E4: Include a matching MdProfile
 
 \priority{high}\clarinb{6.9.a}\checker{CMDI Instance Validator}
 
-The MdProfile contains the unique identifier of the used profile in the Component Registry. This element is mandatory in CMDI 1.2 but optional in CMDI 1.1. However, it should always be included and it should match with the XSD (see \hyperref[x1]{X1}. While the reference to the XSD is an absolute URI the MdProfile just needs to contain the identifier, e.g.
+The MdProfile contains the unique identifier of the used profile in the Component Registry. This element is mandatory in CMDI 1.2 but optional in CMDI 1.1. However, it should always be included and it should match with the XSD (see \hyperref[x1]{X1}). While the reference to the XSD is an absolute URI the MdProfile just needs to contain the identifier, e.g.
 \texttt{clarin.eu:cr1:p\_1361876010680}.
 
 \subsubsection{Resource Proxies}\label{resource-proxies}
@@ -61,7 +61,7 @@ E8: ``Metadata'' type resource proxies should use PIDs
 
 \priority{medium}\clarinb{6.7}\checker{CMDI Instance Validator}
 
-A CMD record should be available via a PID (with(out) a part identifier) (see \hyperref[e2]{E2} and \href{http://hdl.handle.net/1839/00-DOCS.CLARIN.EU-78}{CE-2013-0095} section 6 sub-requirement 8). General tools, like the VLO, use these links among CMD records to reconstruct the collection hierarchy. To be able to do so it is important that the PID used in the metadata resource proxy of a collection record and the MdSelfLink in the referenced CMD record are equal.
+A CMD record should be available via a PID (with(out) a part identifier) (see \hyperref[e2]{E2} and \href{http://hdl.handle.net/1839/00-DOCS.CLARIN.EU-78}{CE-2013-0095 \cite{ce20130095}} section 6 sub-requirement 8). General tools, like the VLO, use these links among CMD records to reconstruct the collection hierarchy. To be able to do so it is important that the PID used in the metadata resource proxy of a collection record and the MdSelfLink in the referenced CMD record are equal.
 
 \paragraph{Resource}\label{resource}
 
@@ -80,7 +80,7 @@ E10: ``Resource'' type resource proxies should use PIDs
 \priority{medium}\clarinb{7}\checker{CMDI Instance Validator}
 
 A resource should be available via a PID (with or without a part identifier) (see
-\href{http://hdl.handle.net/1839/00-DOCS.CLARIN.EU-78}{CE-2013-0095} section 7).
+\href{http://hdl.handle.net/1839/00-DOCS.CLARIN.EU-78}{CE-2013-0095 \cite{ce20130095}} section 7).
 
 \paragraph{LandingPage}\label{landingpage}
 

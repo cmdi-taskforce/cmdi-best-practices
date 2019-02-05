@@ -13,10 +13,11 @@ X2: Use common namespace prefixes
 
 \priority{low} \bptodo{TODO: check: CMDI Instance Validator}
 
-Namespace prefixes are officially just syntactic sugar in XML, i.e., provide a convenient shortcut. However, using common prefixes enable users to quickly assess the scope of an element. The CMDI 1.2 specification recommends the following prefixes for the namespaces URIs in CMDI:
+Namespace prefixes are officially just syntactic sugar in XML, i.e., provide a convenient shortcut. However, using common prefixes enable users to quickly assess the scope of an element. The CMDI 1.2 specification recommends the following prefixes for the namespaces URIs in CMDI as described in table \vref{table:namespaces}.
 
-\note{Alex: this table might be too wide for the generated PDF; we need to look into it}
-
+\begin{sidewaystable}
+\caption{Namespaces}
+\label{table:namespaces}
 \begin{tabular}{|l|l|l|l|}
     \hline
      \textbf{Prefix} & \textbf{Namespace Name} & \textbf{Comment} & \textbf{Recommended Syntax} \\ \hline
@@ -26,7 +27,7 @@ Namespace prefixes are officially just syntactic sugar in XML, i.e., provide a c
      xs & \tt{http://www.w3.org/2001/XMLSchema} & XML Schema & prefixed \\ \hline
      xsi & \tt{http://www.w3.org/2001/XMLSchema-Instance} & XML Schema Instance & prefixed \\ \hline
 \end{tabular}
-
+\end{sidewaystable}
 See section \nameref{authoring-workflow} regarding validation, which implies well-formed XML.
 
 X3: Use UTF-8 encoding
