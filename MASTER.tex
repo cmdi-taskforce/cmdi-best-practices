@@ -63,6 +63,7 @@
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+\usepackage{ragged2e}
 \usepackage{rotating}
 \usepackage{varioref}
 \usepackage{nameref}
@@ -143,6 +144,7 @@
 % Recommendations section left out (abandoned? remove?)
 
 \bibliographystyle{splncs04}
+\raggedright %nicer rendering, especially for items with URLs
 \bibliography{MASTER}
 
 \end{document}
