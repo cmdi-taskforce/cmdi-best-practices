@@ -18,14 +18,14 @@ Namespace prefixes are officially just syntactic sugar in XML, i.e., provide a c
 \begin{sidewaystable}
 \caption{Namespaces}
 \label{table:namespaces}
-\begin{tabu} to 1.0\textwidth {|X[1,l]|X[1,l]|X[1,l]|X[1,l]|}
+\begin{tabu} to 1.0\textwidth {|X[1,l]|X[2,l]|X[1,l]|X[1,l]|}
     \hline
      \textbf{Prefix} & \textbf{Namespace Name} & \textbf{Comment} & \textbf{Recommended Syntax} \\ \hline
-     cmd & \makecell[l]{\tt{http://www.clarin.eu} \\\tt{/cmd/1}} & CMDI instance (general/envelope) & prefixed \\ \hline
-     cmdp & \makecell[l]{\tt{http://www.clarin.eu} \\\tt{/cmd/1/profiles} \\\tt{/\{profileid\}}} & CMDI payload (profile specific) & prefixed \\ \hline
-     cue & \makecell[l]{\tt{http://www.clarin.eu} \\\tt{/cmd/cues/1}} & Cues for tools & prefixed \\ \hline
-     xs & \makecell[l]{\tt{http://www.w3.org/2001} \\\tt{/XMLSchema}} & XML Schema & prefixed \\ \hline
-     xsi & \makecell[l]{\tt{http://www.w3.org/2001} \\\tt{/XMLSchema-Instance}} & XML Schema Instance & prefixed \\ \hline
+     cmd & \makecell[l]{\tt{http://www.clarin.eu/cmd/1}} & CMDI instance (general/envelope) & prefixed \\ \hline
+     cmdp & \makecell[l]{\tt{http://www.clarin.eu/cmd/1} \\\tt{/profiles/\{profileid\}}} & CMDI payload (profile specific) & prefixed \\ \hline
+     cue & \makecell[l]{\tt{http://www.clarin.eu/cmd/cues/1}} & Cues for tools & prefixed \\ \hline
+     xs & \makecell[l]{\tt{http://www.w3.org/2001/XMLSchema}} & XML Schema & prefixed \\ \hline
+     xsi & \makecell[l]{\tt{http://www.w3.org} \\\tt{/2001/XMLSchema-Instance}} & XML Schema Instance & prefixed \\ \hline
 \end{tabu}
 \end{sidewaystable}
 See section \nameref{authoring-workflow} regarding validation, which implies well-formed XML.
