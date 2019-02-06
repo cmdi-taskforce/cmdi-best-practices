@@ -4,7 +4,7 @@
 
 C1: Provide detailed documentation
 
-\priority{medium}\bptodo{partial check: CMDValidate}
+\priority{medium}\pchecker{CMDValidate}
 
 There are various places in a component or profile specification that can be used to document your definitions. The \emph{description} of a component or profile (at the very top of the Component Editor) should be used to summarise its context and usage scenario as envisioned by the modeller. The best way to communicate the \emph{semantics} of the components, elements and attributes within a specification is by means of a well chosen concept link (see section \nameref{concepts} below). The ``\emph{Documentation''} fields that are also available for all of these should contain more `operational' information, for example where or how to obtain an appropriate value or what `soft' constraints or guidelines apply that are not covered by the value scheme or cardinality of the documented item. It can also be used to clarify the
 semantics in case the best fitting concept is too broad or no matching concept can be found.
@@ -39,7 +39,7 @@ property of component to distinguish new components from similarly named existin
 
 C5: Aim for a uniform naming pattern but don't let it stand in the way of using existing components
 
-\priority{low} \bptodo{partial check: CMDValidate}
+\priority{low} \pchecker{CMDValidate}
 
 As a metadata modeller, you will come across various naming patterns. By following the naming pattern recommendations below you have the best chance of reaching a largely uniform style within your components and profiles. However, when looking for existing components to use there is a good chance that you will come across deviating naming patterns. Although less aesthetically pleasing, this should not prevent you from
 reusing a specific component. When creating a new version of an existing component or profile (for example adding elements that you require but are absent from the original) you may want to consider fixing the naming style to match the recommendation below.
@@ -61,21 +61,21 @@ When making an element or attribute mandatory and give it the simple type ``stri
 
 C7: Use an appropriately restrictive value scheme
 
-\priority{medium}\bptodo{check: CMDValidate}
+\priority{medium}\checker{CMDValidate}
 
 Don't use string type if a more specific type can be used.
 
 \label{c8}
 C8: Prefer elements over attributes
 
-\priority{low}\bptodo{check: CMDValidate}
+\priority{low}\checker{CMDValidate}
 
 Attributes generally serve as place to annotate, i.e.~provide
 information about the content of their parent element or component, which is a relatively rare requirement. Attributes lack a number of features that are available on elements, such as the option of being multilingual (as attributes cannot be annotated), the usage of value concept links (for the same reason) and have a maximum cardinality of one. Therefore attributes should only be introduced if there is an actual need to provide `meta-metadata', for example to indicate a degree of uncertainty regarding a value, or to specify a unit of measure. Always consider grouping closely related information (such as language name and language code) in a component rather than making one information item an attribute of the other.
 
 C9: Prefer vocabularies over booleans
 
-\priority{medium} \bptodo{check: CMDValidate}
+\priority{medium}\checker{CMDValidate}
 
 Many aspects described in metadata are of a binary nature. For example, a resource may be openly available or not; or a record may represent either a ''branch'' or a ``leaf''' in a hierarchical collection. It may be tempting to model this using the \emph{boolean} value scheme, for example by means of a field ``publiclyAvailable'' or ``collectionLeaf'' that takes either ``true'' or ``false'' as its value. However, be aware
 that this approach makes the semantics of the value more opaque than necessary. By creating a vocabulary containing two (or more) concept-specific values, you can provide explicit semantics to the values. For example, in comparison to the examples given above, a field `availability' could have value scheme `public' / `restricted'; a field `collectionLevel' could have `branch' / 'leaf'. Provide concept links
@@ -102,9 +102,11 @@ are:
 
 C11: Reuse or recycle components where possible
 
-\priority{high} \bptodo{check: CMDValidate}
+\priority{high} \checker{CMDValidate}
 
-The power of the CMDI model lies in the possibility of reusing and recombining components. Metadata modellers can benefit from the effort that other modellers put into designing, documenting and semantically annotating CMDI components. Existing components, in particular the \textbf{recommended} ones described in the section recommendations \note{Alex: This points to the recommendations section, but it might be that this is no longer supposed to be part of this document. We should then add a link here to wherever recommended Components etc. can be found instead} have been tested in practice and have a good chance of being optimised for e.g.~facet mapping in the VLO. Therefore it is advised to always look for existing components that fully or partially meet your requirements (see \nameref{modelling-workflow}). Multiple existing components can be combined into new components (reused) if they fit, and optionally new components can be created using existing components as a template (this can be referred to as `recycling'), for example when additional elements within a component are required or different cardinalities are desired.
+The power of the CMDI model lies in the possibility of reusing and recombining components. Metadata modellers can benefit from the effort that other modellers put into designing, documenting and semantically annotating CMDI components. Existing components, in particular the \textbf{recommended} ones
+% described in the section recommendations 
+\note{Alex/Twan: This used to point to the recommendations section, but this is no longer supposed to be part of this document. We should then add a link here to wherever recommended Components etc. can be found instead} have been tested in practice and have a good chance of being optimised for e.g.~facet mapping in the VLO. Therefore it is advised to always look for existing components that fully or partially meet your requirements (see \nameref{modelling-workflow}). Multiple existing components can be combined into new components (reused) if they fit, and optionally new components can be created using existing components as a template (this can be referred to as `recycling'), for example when additional elements within a component are required or different cardinalities are desired.
 
 \bptodo{TODO: Contact the owner of a component to discuss the needed changes, which could lead to a revision of the component. This process could be supported (partially) by the Component Registry. At the moment, the conversation will in general have to be initiated via the registry maintainer (contact: cmdi@clarin.eu).}
 
@@ -138,7 +140,7 @@ The following signs indicate that a given component may \textbf{not} be a suitab
 \label{c12}
 C12: Prefer controlled vocabularies
 
-\priority{medium} \bptodo{check: CMDValidate}
+\priority{medium} \checker{CMDValidate}
 
 In order to minimize inconsistencies regarding the selection of values as well as variance due to spelling conventions or typing errors, metadata modellers should provide specifications for the vocabulary intended as element and attribute contents wherever possible.
 
@@ -151,7 +153,7 @@ Furthermore, the CLARIN Component Registry offers the option to provide patterns
 
 C13: Provide a concept link for each vocabulary item
 
-\priority{high} \bptodo{check: CMDValidate}
+\priority{high} \checker{CMDValidate}
 
 A vocabulary included in CMDI might consist of a link to an external vocabulary (in general a CLAVAS vocabulary) or an enumeration of vocabulary items. In case of the latter, add a Concept Link to each item of the proposed vocabulary to determine its semantics (see
 \hyperref[c14]{C14}). If a semantically matching concept cannot be found a new or modified concept can be requested (see \hyperref[c19]{C19}).
@@ -166,7 +168,7 @@ Central parts of the CLARIN infrastructure use this semantic overlay to overcome
 \label{c14}
 C14: Add concept links to all elements, attributes and vocabulary items
 
-\priority{high CLARIN B Centre requirement: 6.9.b} \bptodo{check: CMDValidate}
+\priority{high}\clarinb{6.9.b}\checker{check: CMDValidate}
 
 As a basis the semantics of most values in a metadata record should be made explicit. This is done by adding concept links to both elements and attributes. And where possible to the value itself, i.e., adding concept links to closed/open vocabulary items. If a semantically matching concept cannot be found a new or modified concept can be requested (see
 \hyperref[c19]{C19}).
@@ -176,7 +178,7 @@ Reusing existing components will, in many cases, bring along concept links, pote
 \label{c15}
 C15: Add concept links to salient components
 
-\priority{medium} \bptodo{partial check: CMDValidate}
+\priority{medium} \pchecker{CMDValidate}
 
 Values, attributes and elements always exist within a component. Such a component, and possible ancestor components, can be used to provide semantic context. For example, the component `Actor' provides the role a person plays within the metadata record. However, sometimes CMDI forces one to introduce an intermediate component that covers only data
 structuring needs, with but no semantic use. For example, a
@@ -196,7 +198,7 @@ As is the case with naming and structuring components and elements concept links
 
 C18: Refer to a persistent semantic registry
 
-\priority{high CLARIN B Centre requirement: 6.9.b} \bptodo{check: CMDValidate}
+\priority{high}\clarinb{6.9.b}\checker{CMDValidate}
 
 The preferred semantic registry of CLARIN is the CCR. This registry issues persistent identifiers to its entries and thus concept links in CMDI are stable even when the underlying technology of the registry changes. Next to the CCR also the Dublin Core elements or terms, which use PURLs as persistent identifiers, are considered stable enough. If you consider to refer to another semantic registry please contact the
 CCR Content Coordinators\footnote{See \url{https://www.clarin.eu/ccr/}} so the persistency of the registry can be assessed and the use of its (persistent) identifiers as concept links can be considered.

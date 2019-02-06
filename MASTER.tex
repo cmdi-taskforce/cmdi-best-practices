@@ -1,3 +1,9 @@
+% CMDI Best Practices guide - master file
+%
+% Maintained by the CMDI task force and Metadata Curation task force of CLARIN's centre committee (SCCTC).
+% Some documentation about this guide and how to edit it can be found on the CLARIN Trac:
+% https://trac.clarin.eu/wiki/Taskforces/CMDI/BestPracticesEditing
+%
 \documentclass[twoside]{book}
 
 \def\setbpversion#1{\def\bpversion{#1}}
@@ -57,6 +63,11 @@
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+\usepackage{ragged2e}
+\usepackage{rotating}
+\usepackage{tabu}
+\usepackage{makecell}
+\usepackage{varioref}
 \usepackage{nameref}
 \usepackage{xargs}
 \usepackage[colorinlistoftodos,prependcaption]{todonotes}
@@ -66,7 +77,9 @@
 \newcommandx{\note}[2][1=]{\ifthenelse{\boolean{bpdraft}}{\todo[noinline,linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}{}}
 %priority indication - TODO: make a better implementation
 \newcommandx{\priority}[2][1=]{\todo[inline,linecolor=yellow,backgroundcolor=yellow!25,bordercolor=yellow,#1]{Priority: #2}}
-
+\newcommandx{\clarinb}[2][1=]{\todo[inline,linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{CLARIN B Centre requirement: #2}}
+\newcommandx{\checker}[2][1=]{\todo[inline,linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{Check: #2}}
+\newcommandx{\pchecker}[2][1=]{\todo[inline,linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{Partial check: #2}}
 \input{tex/xmllistings}
 
 \usepackage[color]{changebar}
@@ -77,7 +90,7 @@
 \ifthenelse{\boolean{bpdraft}}{}{\excludecomment{workinprogress}}
 
 %If draft, include current date
-\date{\ifthenelse{\boolean{bpdraft}}{Version \bpversion{} DRAFT\\ \today}{Version \bpversion}}
+\date{CE-2017-1076\\[1.5\baselineskip]\ifthenelse{\boolean{bpdraft}}{Version \bpversion{} DRAFT\\ \today}{Version \bpversion}}
 
 \begin{document}
 
@@ -98,6 +111,7 @@
 \include{introduction/scope}
 \include{introduction/how-to-use-this-guide}
 \include{introduction/outline}
+\include{introduction/acknowledgements}
 
 \mainmatter
 
@@ -130,5 +144,9 @@
 \input{common_approachesproblems/dealing-with-uncertainty}
 
 % Recommendations section left out (abandoned? remove?)
+
+\bibliographystyle{splncs04}
+\raggedright %nicer rendering, especially for items with URLs
+\bibliography{MASTER}
 
 \end{document}
