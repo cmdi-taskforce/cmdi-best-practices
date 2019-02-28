@@ -72,9 +72,10 @@
 \usepackage{xargs}
 \usepackage[colorinlistoftodos,prependcaption]{todonotes}
 \presetkeys{todonotes}{inline}{}
-%inline notes (todos and notes only in draft)
+%inline notes (todos, notes and editors only in draft)
 \newcommandx{\bptodo}[2][1=]{\ifthenelse{\boolean{bpdraft}}{\todo[#1]{#2}}{}}
 \newcommandx{\note}[2][1=]{\ifthenelse{\boolean{bpdraft}}{\todo[noinline,linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}{}}
+\newcommandx{\editor}[2][1=]{\ifthenelse{\boolean{bpdraft}}{\todo[inline,linecolor=pink,backgroundcolor=pink!25,bordercolor=pink,#1]{Editor: #2}}{}}
 %priority indication - TODO: make a better implementation
 \newcommandx{\priority}[2][1=]{\todo[inline,linecolor=yellow,backgroundcolor=yellow!25,bordercolor=yellow,#1]{Priority: #2}}
 \newcommandx{\clarinb}[2][1=]{\todo[inline,linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{CLARIN B Centre requirement: #2}}
