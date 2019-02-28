@@ -2,6 +2,7 @@
 
 \subsubsection{Extensiveness}\label{extensiveness}
 
+\label{cs1}
 CS1: Provide extensive metadata with regard to the profile
 
 \priority{medium}
@@ -21,20 +22,36 @@ specifically applies to by including the respective Resource Proxy id in the \te
 
 \subsubsection{Text Elements and Attributes} \label{text-elements-attributes}
 
+\begin{workinprogress}
+
+\label{cs7}
+CS7: always provide core metadata in English
+\priority{high} \bptodo{TODO check: CMDI Instance Validator}
+
+\bptodo{TODO: these out-of order BP numbers are not so nice, maybe switch to mnemonics, e.g., CS-en en CS-lang ... but I think we already had these in an earlier version.}
+\bptodo{TODO: we have some other phrase for "core metadata" ... lookup}
+
+It is preferred that English wording is provided for each element of the CMDI profile used. However, if this is not possible core textual metadata elements, i.e., title and description, should be available in English. 
+
 \label{cs3}
-\bptodo{Split in (1) use english (=translate description, perhaps also title), (2) specify language (synchronise with common approaches). Factor in use of vocabularies}
 CS3: Explicitly name the languages used
+\priority{high} \bptodo{TODO check: CMDI Instance Validator}
 
-\priority{medium} \bptodo{check: CMDI Instance Validator}
+\bptodo{TODO: the components section in modelling should also encourage multilinguality, maybe in C10}
 
-The default language for element contents is English, meaning that English wording should be provided for each element of the CMDI profile used. Additionally, other languages may be used, complementing the English version of a CMDI record. The possibility of multilinguality has to be already included in the design of the component. For the specification of the language applied, each element should be provided with an \texttt{@xml:lang} attribute (even when the content is in
+The default language for element contents is English (see \hyperref[cs7]{CS7}). Additionally, other languages may be used, complementing the English version of a CMDI record. The possibility of multilinguality has to be already included in the design of the component. For the specification of the language applied, each element should be provided with an \texttt{@xml:lang} attribute (even when the content is in
 English). Use a \href{https://tools.ietf.org/rfc/bcp/bcp47.txt}{BCP 47 language tag} \cite{bcp47} to unambiguously identify the respective language within \texttt{@xml:lang}.
 
+For elements that use vocabulary entries translations in other languages then English can be indirectly specified by language specific labels in the vocabulary. 
+
+\end{workinprogress}
+
+\label{cs4}
 CS4: Use specific rather than (only) generic metadata
 
 \priority{medium}
 
-\bptodo{Separate best practice on not using string concatenation for multi-valued content. Old smell covering this: 
+\bptodo{TODO: Separate best practice on not using string concatenation for multi-valued content. Old smell covering this: 
 
   Occurrence of multiple values in a single string. For example multiple element values separated by commas, semicolons or other characters. In general it is better to use repeating elements, or use separate elements if the individual values have different semantics (for example resource type ``English literature -- Middle English'').
 }
@@ -47,13 +64,13 @@ The information provided should be specific rather than generic
 
 CS5: In open vocabularies make use of the suggested items before introducing extensions
 
-\priority{medium} \bptodo{partially check: CMDI Instance
-Validator}
+\priority{medium} \bptodo{partially check: CMDI Instance Validator}
 
 In case of an open vocabulary provided for an element or attribute the proposed vocabulary should be applied wherever possible and only extended in case of gaps with regard to contents/concepts. If the proposed vocabulary is extended, try to avoid overlapping meanings and ambiguities among vocabulary items.
 
 \note{Menzo: Turn into a separate BP: ``If a suggested value is taken for an element and a concept link is available in the vocabulary, the link should be copied into the \texttt{@cmd:ValueConceptLink}''}
 
+\label{cs6}
 CS6: Provide consistent vocabulary items
 
 \priority{medium}
