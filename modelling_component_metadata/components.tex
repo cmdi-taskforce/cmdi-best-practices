@@ -196,22 +196,25 @@ structuring needs, with but no semantic use. For example, a
 \begin{workinprogress}
 \bptodo{Add this section}
 C16: Refer to approved concepts
-\priority{medium} \bptodo{TODO: check: CMDValidate
-
+\priority{medium}
+\bptodo{TODO: check: CMDValidate\\
 \url{https://github.com/clarin-eric/cmdi-toolkit/issues/12}}
+
+The CLARIN Concept Registry, being a tool for concept management as well as concept retrieval (for end users), contains concepts of various quality states, reflecting their current position in the CCR editorial process. Concepts which are formally accepted for use are assigned the \textit{approved} status, whereas those still under discussion by the CCR managers are \textit{candidates}, and may be modified or rejected  later on.  In CMD profiles, components, elements and attributes, only link to \textit{approved} concepts.
+
 \end{workinprogress}
 
 C17: Refer to a concept that is ``as generic as possible but as specific as needed''
 
 \priority{high}
 
-As is the case with naming and structuring components and elements concept links should also be as generic as possible, i.e., foster reuse of the component by not pinpointing the semantics too specifically. For example, a generic `person name' concept can be used without indication of the role the person plays within the component or profile. However, a general name concept might not be suited as it needs to be explicit that it is a person's name. But see \hyperref[c15]{C15} to still use generic concepts and add specific semantics using the context.
+As is the case with naming and structuring components and elements, concept links should also be as generic as possible, i.e., foster reuse of the component by not pinpointing the semantics too specifically. In practical terms, never select a concept  that is \textbf{more} specific than the intended meaning of the component or element to which the concept is to be linked. However, the opposite - choosing a concept with a more general meaning that the component or element in question - is allowed, and sometimes even encouraged. For example, a generic `person name' concept can be used without indication of the role the person plays within the component or profile. However, a general name concept might not be suited as it needs to be explicit that it is a person's name. But see \hyperref[c15]{C15} to still use generic concepts and add specific semantics using the context.  Note also that the main key to the meaning of a concept is its definition, not its labels.
 
 C18: Refer to a persistent semantic registry
 
 \priority{high}\clarinb{6.9.b}\checker{CMDValidate}
 
-The preferred semantic registry of CLARIN is the CCR. This registry issues persistent identifiers to its entries and thus concept links in CMDI are stable even when the underlying technology of the registry changes. Next to the CCR also the Dublin Core elements or terms, which use PURLs as persistent identifiers, are considered stable enough. If you consider to refer to another semantic registry please contact the
+The preferred semantic registry of CLARIN is the Clarin Concept Registry (CCR)\footnote{See \url{https://concepts.clarin.eu/ccr/}}, which is subdivided into several concept schemes. For component modelling purposes, the Metadata concept scheme should be used.  CCR issues persistent identifiers to its entries and thus concept links in CMDI are stable even when the underlying technology of the registry changes. Next to the CCR also the Dublin Core elements or terms, which use PURLs as persistent identifiers, are considered stable enough. If you consider to refer to another semantic registry please contact the
 CCR Content Coordinators\footnote{See \url{https://www.clarin.eu/ccr/}} so the persistency of the registry can be assessed and the use of its (persistent) identifiers as concept links can be considered.
 
 \label{c19}

@@ -6,7 +6,7 @@ Although the guide will express the best practices in strict wording, it is poss
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \emph{High priority}: a CMD record not following this best practice severely counters the basic principles of CMDI \bptodo{TODO: reference}, e.g.~reusable components with explicit semantics, or common best practices for resources on the web, e.g.~URLs should be resolvable, not dead links \bptodo{TODO: reference};
+  \emph{High priority}: a CMD record not following this best practice severely counters the basic principles of CMDI \cite{lrec2012cmdi}, e.g.~reusable components with explicit semantics, or common best practices for resources on the web \cite{w3cstyle,dwbp}, e.g.~URLs should be resolvable, not dead links;
 \item
   \emph{Medium priority}: default priority of a best practice, which means it can be broken if you have good local (technical or organizational) reasons to deviate;
 \item
@@ -16,6 +16,9 @@ Although the guide will express the best practices in strict wording, it is poss
 %\note{Menzo: basic principles of CMDI: 1) components, 2) generic as possible specific as needed (reusable), 3) explicit semantics}
 Best practices with a \emph{high} priority should be followed. If a best practice with a medium level priority is not followed the reasons why should always be documented.
 
+The priority level of a best practice is indicated in a light yellow box, e.g.
+\priority{high}
+
 Compliance with some best practices can be (partially) assessed
 automatically. CLARIN provides the following tools and services:
 
@@ -23,7 +26,7 @@ automatically. CLARIN provides the following tools and services:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  CMDValidator:\footnote{See
+  CMDValidate:\footnote{See
     \url{https://github.com/clarin-eric/cmd-validate/releases}} The validator for CMD components and profiles is in general used via the Component Registry;
 \item
   CMDI Instance Validator:\footnote{See
@@ -35,6 +38,9 @@ automatically. CLARIN provides the following tools and services:
 \end{enumerate}
 
 %The functionalities of the two more low level validators are being integrated into the CLARIN curation module to provide a single service for CMD quality assessment. %\note{Menzo: @Matej: is ``are being integrated into'' not a too strong claim?}
+
+The tool or service to (partially) check a best practice is indicated in a light green box, e.g.
+\pchecker{CMDValidate}
 
 This guide also includes ``smells'' sections. (Bad) Smells are used as simple indicators for bad or inefficient designs (typically in programming languages). To identify a specific ``smell'' in a profile does not necessarily mean that the design is broken and should be replaced. Instead it should be seen as a warning sign that there may be a problem which should be checked. Measures to eliminate actual problems by changing the design are often called refactorings. 
 
