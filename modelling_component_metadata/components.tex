@@ -107,15 +107,10 @@ C11: Reuse or recycle components where possible
 \priority{high} \checker{CMDValidate}
 
 The power of the CMDI model lies in the possibility of reusing and recombining components. Metadata modellers can benefit from the effort that other modellers put into designing, documenting and semantically annotating CMDI components. Existing components
-%, in particular the \textbf{recommended} ones
-% described in the section recommendations 
-\note{We should then add a link here to wherever recommended Components etc. can be found once such a resource is available} are likely to have been tested in practice and have a good chance of being optimised for e.g.~facet mapping in the VLO. Therefore it is advised to always look for existing components that fully or partially meet your requirements (see \nameref{modelling-workflow}). Multiple existing components can be combined into new components (reused) if they fit, and optionally new components can be created using existing components as a template (this can be referred to as `recycling'), for example when additional elements within a component are required or different cardinalities are desired.
+ are likely to have been tested in practice and have a good chance of being optimised for e.g.~facet mapping in the VLO. Therefore it is advised to always look for existing components that fully or partially meet your requirements (see \nameref{modelling-workflow}). Multiple existing components can be combined into new components (reused) if they fit, and optionally new components can be created using existing components as a template (this can be referred to as `recycling'), for example when additional elements within a component are required or different cardinalities are desired.
 
-\begin{workinprogress}
 \note{It would be good if the component registry had some better facilities for this, but at the moment it doesn't... See \url{https://github.com/clarin-eric/component-registry-front-end/issues/143}}
 Contact the owner of a component to discuss the needed changes, which could lead to a revision of the component. If it is unclear how to contact the owner, the registry maintainer (contact: cmdi@clarin.eu) may be able to help you out.
-
-\end{workinprogress}
 
 It may not always be clear if an existing component can serve as a good basis for a new component. In some cases the better option may actually turn out to be to create a component from scratch. Although it is hard to draw a clear line that is generally applicable, we can provide some guidelines as to whether a component \textbf{can} be considered fit for
 ``recycling'':
@@ -208,7 +203,7 @@ C17: Refer to a concept that is ``as generic as possible but as specific as need
 
 \priority{high}
 
-As is the case with naming and structuring components and elements, concept links should also be as generic as possible, i.e., foster reuse of the component by not pinpointing the semantics too specifically. In practical terms, never select a concept  that is \textbf{more} specific than the intended meaning of the component or element to which the concept is to be linked. However, the opposite - choosing a concept with a more general meaning that the component or element in question - is allowed, and sometimes even encouraged. For example, a generic `person name' concept can be used without indication of the role the person plays within the component or profile. However, a general name concept might not be suited as it needs to be explicit that it is a person's name. But see \hyperref[c15]{C15} to still use generic concepts and add specific semantics using the context.  Note also that the main key to the meaning of a concept is its definition, not its labels.
+As is the case with naming and structuring components and elements, concept links should also be as generic as possible, i.e., foster reuse of the component by not pinpointing the semantics too specifically. In practical terms, never select a concept  that is \textbf{more} specific than the intended meaning of the component or element to which the concept is to be linked. However, the opposite - choosing a concept with a more general meaning than the component or element in question - is allowed, and sometimes even encouraged. For example, a generic `person name' concept can be used without indication of the role the person plays within the component or profile. However, a general name concept might not be suited as it needs to be explicit that it is a person's name. But see \hyperref[c15]{C15} to still use generic concepts and add specific semantics using the context.  Note also that the main key to the meaning of a concept is its definition, not its labels.
 
 C18: Refer to a persistent semantic registry
 

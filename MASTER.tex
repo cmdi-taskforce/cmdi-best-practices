@@ -37,6 +37,8 @@
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+% make running heads shorter
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
             pdfborder={0 0 0},
