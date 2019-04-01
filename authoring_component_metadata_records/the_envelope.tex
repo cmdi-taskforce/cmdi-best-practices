@@ -66,6 +66,7 @@ A CMD record should be available via a PID (with(out) a part identifier) (see \h
 
 \paragraph{Resource}\label{resource}
 
+\note{Menzo: I'll see if I can create a schematron rule for this (will need an extension to do a HEAD request and get the content-type response field)}
 \bptodo{Is there an indication of the mime type? Does it match the actual mime type of the response obtained from the resource location?}
 
 \bptodo{The use of format variants.}
@@ -74,7 +75,7 @@ E9: Specify the MIME type of a resource
 
 \priority{high}\checker{check: CMDI Instance Validator}
 
-Give the MIME type (a.k.a. media type) of the resource. This enables general tools, like the Language Resource Switchboard, to direct users to tools and/or services that can process or display this type of resources. Sometimes the MIME type is too coarse, e.g., for TEI resources, in that case a format variant can be added to fine tune the type. However, the format variant should come from a controlled vocabulary. The MIME type is also part of the HTTP response when resolving the ResourceProxy reference, which should match the MIME type specified.
+Give the MIME type (a.k.a. media type) of the resource. This enables general tools, like the Language Resource Switchboard, to direct users to tools and/or services that can process or display this type of resources. Sometimes the MIME type is too coarse, e.g., for TEI resources, in that case a format variant can be added to fine tune the type. However, the format variant should come from a controlled vocabulary.\note{Menzo: is there a public URL for the list of TEI format variants?} The MIME type is also part of the HTTP response when resolving the ResourceProxy reference, which should match the MIME type specified.
 
 E10: ``Resource'' type resource proxies should use PIDs
 
