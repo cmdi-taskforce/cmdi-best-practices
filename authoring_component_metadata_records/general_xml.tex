@@ -31,16 +31,22 @@ Namespace prefixes are officially just syntactic sugar in XML, i.e., provide a c
 \end{sidewaystable}
 See section \nameref{authoring-workflow} regarding validation, which implies well-formed XML.
 
-\begin{workinprogress}
 X4: Specify encoding
 
 \priority{high}
 
-The encoding of XML documents, i.e., a CMD record doesn't have to be stated explicitly. It can be provided in various, possibly conflicting ways: via a Byte Order Marker (BOM), in the XML declaration of the document or a HTTP header. Also it is possible to not specify the encoding at all. This results in the risk that a processing application has to guess the encoding or fallback to some default, which may cause all kinds of conversion problems. The best practice is thus to always include the used encoding in the XML declaration, and to align all other used methods with the specified encoding.
+The encoding of XML documents, i.e., a CMD record doesn't have to be stated explicitly. It can be provided in various, possibly conflicting ways: via a Byte Order Marker (BOM), in the XML declaration of the document or a HTTP header. Also it is possible to not specify the encoding at all. This results in the risk that a processing application has to guess the encoding or fallback to some default, which may cause all kinds of conversion problems. The best practice is thus to always include the used encoding in the XML declaration, as shown in the following code snippet.
+
+\lstset{language=XML}
+\begin{lstlisting}
+<?xml version="1.0" encoding="UTF-8"?>
+<cmd:CMD ... > ... </cmd:CMD>
+\end{lstlisting}
+
+All other used methods, e.g., HTTP headers provided by the web server, should be aligned with the encoding thus specified.
 
 X3: Use UTF-8 encoding
 
 \priority{high}
 
-The UTF-8 encoding is a compromise encoding, it is as compact as ASCII but can also support, with some increase in file size, any unicode codepoint.\footnote{See \href{https://www.fileformat.info/info/unicode/utf8.htm}{\nolinkurl{https://www.fileformat.info/info/unicode/utf8.htm}}} UTF-8 is widely supported and a record that uses it thus has a very low risk of being mangled by encoding conversion problems.
-\end{workinprogress}
+UTF-8\cite{rfc3629} is widely supported and a record that uses it thus has a very low risk of being mangled by encoding conversion problems.
